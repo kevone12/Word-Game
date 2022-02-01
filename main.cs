@@ -19,9 +19,10 @@ class Program {
         if( guess[x]==word[x]) { 
            //if the current letter is in the right place, write R 
           Console.WriteLine("G");
-        }if (word.indexOf(guess[x])>-1) { 
-             Console.WriteLine("The letter is in the word, but in the wrong place");
-       }
+        }else if (word.IndexOf(guess[x])>-1) { 
+             Console.WriteLine("Y");
+       }//else
+          //print B
        }
     }while (guesses>0);
 
