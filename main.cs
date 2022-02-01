@@ -2,8 +2,11 @@ using System;
 
 class Program {
   public static void Main (string[] args) {
+    Random rnd = new Random();
+    string[] wordList={"flame", "tacos","swarm"};
+    int choice = rnd.Next(0,wordList.Length);
     // pick the guess word 
-    string word = "flame";
+    string word = wordList[choice];
     // Set number of guesses
     int guesses = 6;
     do{
@@ -22,7 +25,17 @@ class Program {
         }else if (word.IndexOf(guess[x])>-1) { 
              Console.WriteLine("Y");
        }//else
+       else{
           //print B
+          Console.WriteLine("B");
+
+       }
+          
+       }
+       //if guess is equal to word
+       if(guess==word){
+       Console.WriteLine("You Win");
+        break;
        }
     }while (guesses>0);
 
